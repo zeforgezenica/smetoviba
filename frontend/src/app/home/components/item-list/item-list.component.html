@@ -9,7 +9,7 @@
       class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
       <article *ngFor="let item of data"
         class="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl px-8 pb-8 pt-40 w-full mx-auto cursor-pointer shadow-lg">
-        <img src="{{item.image}}" alt="{{item.name}}" class="absolute inset-0 h-full w-full object-cover">
+        <img src="../../../../assets/images/{{item.image}}" alt="{{item.name}}" class="absolute inset-0 h-full w-full object-cover">
         <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40"></div>
         <h3 class="z-10 mt-3 text-2xl font-bold text-white">{{item.name}}</h3>
       </article>

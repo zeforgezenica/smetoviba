@@ -15,6 +15,7 @@ import { Title, Meta } from '@angular/platform-browser';
 })
 export class HomeComponent implements OnInit {
   locations: Location[] = [];
+
   constructor(private locationService: LocationService, private title: Title, private meta: Meta) {
     this.title.setTitle('Početna - Dobro došli');
     this.meta.addTags([
@@ -25,7 +26,7 @@ export class HomeComponent implements OnInit {
   
   ngOnInit() {
     this.locationService.getLocations().subscribe(data => {
-      this.locations = data.locations; // Assuming 'locations' is the key in your JSON
+      this.locations = data; // Assuming 'locations' is the key in your JSON
     });
   }
 }

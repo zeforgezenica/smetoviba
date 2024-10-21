@@ -26,6 +26,7 @@ export class LocationComponent implements OnInit {
   };
   zoom = 12;
   markers: Marker[] = [];
+  loading: boolean = true;
   options: google.maps.MapOptions = {
     mapTypeId: 'hybrid',
     zoomControl: true,
@@ -59,17 +60,25 @@ export class LocationComponent implements OnInit {
   constructor(private locationService: LocationService) {}
 
   ngOnInit() {
-    this.locationService.getLocations().subscribe(data => {
-      this.locations = data.locations; // Assuming 'locations' is the key in your JSON
-      this.loadMarkers();
-    })    
+    this.locationService.getLocations().subscribe({
+      next: (locations: Location[]) => {
+        this.locations = locations;
+        this.loadMarkers();
+      },
+      error: err => this.loading = false,
+      complete: () => this.loading = false
+    });
   }
 
   loadMarkers() {
-    this.locations.forEach(location => {
+    this.locations.forEach((location: Location) => {
+      let coordinates = {
+        lat: location.latitude,
+        lng: location.longitude
+      }
       this.markers.push(
         {
-          position: location.coordinates,
+          position: coordinates,
           title: location.name,
           image: location.image
         },

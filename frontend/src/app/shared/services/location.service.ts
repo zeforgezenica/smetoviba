@@ -1,16 +1,18 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
 import { HttpClient } from '@angular/common/http';
+import { Location } from '../models/location.model';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LocationService {
-  private jsonUrl = 'assets/data/data.json'; // Path to your JSON file
+  private apiUrl = environment.apiUrl;
 
   constructor(private http: HttpClient) {}
 
-  getLocations(): Observable<any> {
-    return this.http.get(this.jsonUrl);
+  getLocations(): Observable<Location[]> {
+    return this.http.get<Location[]>(this.apiUrl + '/locations');
   }
 }

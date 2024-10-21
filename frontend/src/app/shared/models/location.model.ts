@@ -4,13 +4,18 @@ export interface WorkingHours {
   close: string; // e.g., "17:00"
 }
 export interface Location {
+  latitude: number;
+  longitude: number,
   id: number;
   name: string;
   description: string,
   address: string;
   type: string;
   image?: string;
-  coordinates: google.maps.LatLngLiteral;
+  Category: {
+    name: string,
+    id: number
+  }
 }
 
 export interface LocationWithHours extends Location {
