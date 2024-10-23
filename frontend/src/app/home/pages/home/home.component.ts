@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
   locations: Location[] = [];
 
   constructor(private locationService: LocationService, private title: Title, private meta: Meta) {
-    this.title.setTitle('Početna - Dobro došli');
+    this.title.setTitle('Početna - dobro došli na informativni portal o izletištu Smetovi');
     this.meta.addTags([
       { name: 'description', content: 'Sve informacije na jednom mjestu o izletištu Smetovi kod Zenice' },
       { name: 'keywords', content: 'Smetovi, Izletište, Zenica, Snijeg' }

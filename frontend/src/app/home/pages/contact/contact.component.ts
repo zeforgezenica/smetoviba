@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 import { ContactFormComponent } from 'src/app/home/components/contact/contact-form/contact-form.component';
 
 @Component({
@@ -8,4 +9,12 @@ import { ContactFormComponent } from 'src/app/home/components/contact/contact-fo
   standalone: true,
   imports: [ContactFormComponent],
 })
-export class ContactComponent {}
+export class ContactComponent {
+  constructor(private title: Title, private meta: Meta) {
+    this.title.setTitle('Kontakt');
+    this.meta.addTags([
+      { name: 'description', content: 'Sve informacije na jednom mjestu o izletištu Smetovi kod Zenice' },
+      { name: 'keywords', content: 'Smetovi, Izletište, Zenica, Snijeg, Kontakt' }
+    ]);
+  }
+}
