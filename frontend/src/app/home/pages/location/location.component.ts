@@ -6,7 +6,7 @@ import { GoogleMapsModule, MapMarker, MapInfoWindow } from '@angular/google-maps
 import { InfoWindowContent } from 'src/app/shared/models/info-window.model';
 import { Marker } from 'src/app/shared/models/marker.model';
 import { LocationService } from 'src/app/shared/services/location.service';
-
+import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-location',
@@ -57,7 +57,13 @@ export class LocationComponent implements OnInit {
     name: '',
     image: ''
   };
-  constructor(private locationService: LocationService) {}
+  constructor(private locationService: LocationService, private title: Title, private meta: Meta) {
+    this.title.setTitle('Lokacije - sve lokacije na jednom mjestu');
+    this.meta.addTags([
+      { name: 'description', content: 'Pregledajte sve lokacije koje se nalaze na Smetovima' },
+      { name: 'keywords', content: 'Smetovi, Izletište, Zenica, Snijeg, Lokacije, Objekti' }
+    ]);
+  }
 
   ngOnInit() {
     this.locationService.getLocations().subscribe({
