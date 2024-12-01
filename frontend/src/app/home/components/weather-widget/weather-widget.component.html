@@ -1,7 +1,0 @@
-<div class="weather-widget flex items-center" *ngIf="weatherData">
-    <!-- Weather Icon -->
-    <img [src]="weatherIcon" alt="Weather Icon" class="weather-icon mr-2">
-
-    <!-- Temperature Display -->
-    <div class="temperature text-white text-md font-medium font-mountain" [ngClass]="{ 'text-gray-800': hasScrolled, 'text-white': !hasScrolled }">{{ weatherData?.roundedTemp }}°C</div>
-</div>
