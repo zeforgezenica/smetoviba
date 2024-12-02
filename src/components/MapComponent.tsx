@@ -9,8 +9,6 @@ export default function MapComponent() {
 
         // Initialize the map44.24541
         const map = L.map("map").setView([44.24541, 17.96368], 11);
-        console.log("map")
-        console.log(map)
         // Add tile layer
         L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
           attribution: "© OpenStreetMap contributors",
