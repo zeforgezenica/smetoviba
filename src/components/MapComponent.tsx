@@ -11,7 +11,6 @@ export default function MapComponent() {
           center: [44.24541, 17.96368],
           zoom: 11,
           minZoom: 10,
-          maxZoom: 13,
           maxBounds: [
             [43.907629, 17.272634],
             [44.552763, 18.600762],
