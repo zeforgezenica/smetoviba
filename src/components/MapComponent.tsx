@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import "leaflet/dist/leaflet.css";
-import type { LatLngTuple } from "leaflet";
 
 export default function MapComponent() {
   useEffect(() => {
@@ -8,27 +7,25 @@ export default function MapComponent() {
       if (typeof window !== "undefined") {
         const L = await import("leaflet");
 
-        // Initialize the map
-        const map = L.map("map").setView([44.24541, 17.96368], 11);
-        // Add tile layer
+        const map = L.map("map", {
+          center: [44.24541, 17.96368],
+          zoom: 11,
+          minZoom: 10,
+          maxBounds: [
+            [43.907629, 17.272634],
+            [44.552763, 18.600762],
+          ],
+          maxBoundsViscosity: 1.0,
+        });
+
         L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
           attribution: "© OpenStreetMap contributors",
         }).addTo(map);
 
-        // Add a marker
         L.marker([44.24541, 17.96368])
           .addTo(map)
           .bindPopup("Izletište Smetovi")
           .openPopup();
-
-        // Define bounds
-        const bounds: LatLngTuple[] = [
-          [44.176211, 17.797032],
-          [44.426157, 18.308932],
-        ];
-
-        // Fit map to bounds
-        map.fitBounds(bounds);
       }
     }
 
