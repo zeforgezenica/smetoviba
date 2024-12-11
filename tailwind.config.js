@@ -2,7 +2,12 @@
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "pastel-green": "#77dd77",
+        "tomato-red": "#ff6347",
+      },
+    },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/aspect-ratio")],
 };

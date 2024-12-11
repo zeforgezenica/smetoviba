@@ -3,22 +3,25 @@ import type { CollectionEntry } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import FormattedDate from '../components/FormattedDate.astro';
 
-type Props = CollectionEntry<'blog'>['data'];
+type Props = CollectionEntry<'organization'>['data'];
 
-const { title, description, pubDate, heroImage, photoAuthor } = Astro.props;
+const { title, description, heroImage, type, workHours, phone, contact } = Astro.props;
 ---
 
 <html lang="en">
 	<head>
 		<BaseHead title={title} description={description} />
 		<style>
+			main {
+				width: 100%;
+				margin: 0;
+			}
 			.image-container {
 				width: 100%;
 				height: 0;
 				top: 0;
-				padding-bottom: 67.97%; /* Aspect ratio */
+				padding-bottom: 47.41%; /* Aspect ratio */
 				position: absolute;
 			}
 
@@ -30,13 +33,13 @@ const { title, description, pubDate, heroImage, photoAuthor } = Astro.props;
 				height: 100%;
 				object-fit: cover;
 				object-position: bottom; 
-				z-index: -1; 
+				z-index: -1;
 				box-shadow: var(--box-shadow);
-				-webkit-mask-image: url('/BlogPost ImgMask.svg');
+				-webkit-mask-image: url('/OrgPost ImgMask21_10.svg');
 				-webkit-mask-size: cover;
 				-webkit-mask-repeat: no-repeat;
 				-webkit-mask-position: center;
-				mask-image: url('/BlogPost ImgMask.svg');
+				mask-image: url('/OrgPost ImgMask21_10.svg');
 				mask-size: cover;
 				mask-repeat: no-repeat;
 				mask-position: center;
@@ -49,35 +52,26 @@ const { title, description, pubDate, heroImage, photoAuthor } = Astro.props;
                 padding: 3em;
                 color: rgb(var(--gray-dark));
                 box-shadow: 0 0 50px rgba(150, 150, 150, 0.5), 0 0 50px rgba(150, 150, 150, 0.5); /* Increased shadow spread */
-                flex-grow: 1; 
-                min-height: calc(100vh - 64px); 
-				overflow: visible;
             }
 		</style>
 	</head>
 
-	<body class="font-sans">
+	<body class="">
 		<Header />
-		<main class="w-full m-0">
+		<main>
 			<div class="image-container">
 				<img src={heroImage} alt={title} class="hero-image" />
-			</div>
+			  </div>
 			  
 			<article>
 				<div class="prose">
-          			<div class="title mb-4">
-						<div class="date font-atkinson text-gray-500 mb-2">
-							{
-								pubDate && (
-									<div class="last-updated-on">
-										<FormattedDate date={pubDate} />
-									</div>
-								)
-							}
-						</div>
-						<h1 class="text-3xl font-exo2 font-bold mb-2">{title}</h1>
-						<div class="ttl-sep w-20 h-1 bg-orange-500 my-2"></div>
-						<h2 class="photo-author font-atkinson text-gray-500 text-lg">{photoAuthor}</h2>
+          			<div class="mb-4 text-left">
+						<div class="text-gray-500 font-atkinson mb-2">Aktivnosti / {type}</div>
+						<h1 class="text-3xl font-exo2  font-bold  mb-2">{title}</h1>
+						<div class="w-20 h-1 bg-orange-500 mb-4"></div>
+						<h2 class="text-lg font-atkinson text-gray-500">Radno vrijeme: {workHours}</h2>
+						<h2 class="text-lg font-atkinson text-gray-500">Telefon: {phone}</h2>
+						<h2 class="text-lg font-atkinson text-gray-500">Kontakt: {contact}</h2>
 					</div>
 					<slot />
 				</div>

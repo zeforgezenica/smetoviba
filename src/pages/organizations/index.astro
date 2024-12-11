@@ -1,0 +1,57 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+import { getCollection } from 'astro:content';
+import '../../styles/global.css';
+
+const posts = (await getCollection('organizations'))
+
+function isOpen(workHours: string): boolean {
+    const [openTime, closeTime] = workHours.split('-').map(time => parseInt(time));
+    const currentHour = new Date().getHours();
+    return currentHour >= openTime && currentHour < closeTime;
+}
+---
+<!doctype html>
+<html lang="en">
+    <head>
+        <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    </head>
+    <body>
+        <Header />
+        <main class="pt-24">
+            <section>
+                <ul class="space-y-6">
+                    {
+                        posts.map((post) => (
+                            <li>
+                                <a href={`/organizations/${post.slug}/`}>
+                                    <div class="organization flex flex-col md:flex-row w-4/5 mx-auto bg-white shadow-lg overflow-hidden">
+                                        <div class="org-image flex-none md:w-1/4 h-48 md:h-auto">
+                                            <img src={post.data.heroImage} alt="" class={`object-cover w-full h-full
+													${!isOpen(post.data.workHours) ? 'filter grayscale' : ''}`}/>
+                                        </div>
+                                        <div class="org-content flex flex-col justify-center items-start flex-grow p-4">
+											<h4 class="title font-bold font-exo2 text-lg sm:text-base md:text-xl lg:text-2xl xl:text-3xl font-bold">{post.data.title}</h4>
+											<h5 class="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-gray-600">Radno vrijeme: {post.data.workHours}</h5>
+											<h5 
+												class={`text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-bold 
+													${isOpen(post.data.workHours) ? 'text-pastel-green' : 'text-tomato-red'}`}
+											>
+												{isOpen(post.data.workHours) ? 'Otvoreno' : 'Zatvoreno'}
+											</h5>
+										</div>
+                                    </div>
+                                </a>
+                            </li>
+                        ))
+                    }
+                </ul>
+            </section>
+        </main>
+        <Footer />
+    </body>
+</html>
+

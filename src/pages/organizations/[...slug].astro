@@ -1,0 +1,34 @@
+---
+import { type CollectionEntry, getCollection } from 'astro:content';
+import OrgPost from '../../layouts/OrgPost.astro';
+
+export async function getStaticPaths() {
+	const posts = await getCollection('organizations');
+	return posts.map((post) => ({
+		params: { slug: post.slug },
+		props: post,
+	}));
+}
+type Props = CollectionEntry<'organizations'>;
+
+const { slug } = Astro.params;
+const posts = await getCollection('organizations');
+
+interface Post {
+  slug: string;
+  render: () => Promise<{ Content: any }>;
+  data: any;
+}
+
+const post: Post | undefined = posts.find((page) => page.slug === slug);
+
+if (!post) {
+  throw new Error(`Post not found for slug ${slug}`);
+}
+
+const { Content } = await post.render();
+---
+
+<OrgPost {...post.data}>
+	<Content />
+</OrgPost>
