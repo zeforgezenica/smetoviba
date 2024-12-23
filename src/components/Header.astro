@@ -1,43 +1,82 @@
----
+--- 
 import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../consts';
 ---
 
 <header>
 	<nav>
-		<img id="navbar-logo" src="/smetovi-logo.png" alt="" srcset="">
+		<img id="navbar-logo" src="/smetovi-logo.png" alt="Logo" />
 		<div class="internal-links">
 			<HeaderLink href="/map">Mapa</HeaderLink>
 			<HeaderLink href="/">Home</HeaderLink>
 			<HeaderLink href="/blog">Blog</HeaderLink>
 			<HeaderLink href="/organizations">Aktivnosti</HeaderLink>
 			<HeaderLink href="/events">Događaji</HeaderLink>
-			<HeaderLink>Kontakt</HeaderLink>
-		</div>
-		<div class="social-links">
-			<a href="https://github.com/zeforgezenica/smetoviba" target="_blank">
-				<span class="sr-only">Go to Astro's GitHub repo</span>
-				<svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32"
-					><path
-						fill="currentColor"
-						d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
-					></path></svg
-				>
-			</a>
+			<button id="openModal" style="padding: 10px 20px; background: #1f3d7a; color: #fff; border: none; border-radius: 5px; cursor: pointer;">Kontakt</button>
 		</div>
 	</nav>
 </header>
+
+<div id="modal" class="modal" style="display: none;">
+  <div class="modal-content">
+    <span id="closeModal" class="close"></span>
+    
+    <div class="contact-info">
+      <h2>KONTAKTIRAJTE NAS</h2>
+      <p><span>📍</span> Smetovi, Zenica</p>
+      <p><span>📞</span> 061 604 148</p>
+      <p><span>✉</span> mail@gmail.com</p>
+      <div class="newsletter">
+        <h3>NEWSLETTER</h3>
+        <p style="margin-top: 10px; font-size: 14px; color: #666;">
+          Pridružite se našoj zajednici ljubitelja prirode i planinarenja!  
+          Pretplatite se na naš newsletter kako biste prvi saznali o novostima sa Smetova, nadolazećim događajima, 
+          savjetima za planinarenje i aktivnostima na planini. Ostanite povezani s prirodom i uvijek informisani!
+      </p>
+      <input type="email" placeholder="E-mail" />
+      <button type="button">Prijavi se</button>
+    </div>  
+    </div>
+
+    <div class="contact-form">
+      <form>
+        <input type="text" placeholder="Ime" required />
+        <input type="text" placeholder="Prezime" required />
+        <input type="email" placeholder="Email" required />
+        <input type="text" placeholder="Subjekat" required />
+        <textarea placeholder="Poruka" rows="5" required></textarea>
+        <button type="submit">Pošalji</button>
+      </form>
+    </div>
+  </div>
+</div>
+
 <style>
 	header {
 		padding: 0 1em;
 		height: 0px;
 	}
+
+	body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f8f9fa;
+  }
 	
 	nav {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-	}
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 0.5rem 1rem;
+  }
+
+	nav .nav-links {
+    display: flex;
+    gap: 1rem;
+  }
+
 	nav a {
 		padding: 1em 0.5em;
 		color: var(--black);
@@ -62,4 +101,167 @@ import { SITE_TITLE } from '../consts';
 			display: none;
 		}
 	}
+  
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f8f9fa;
+}
+
+/* Modal */
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.modal-content {
+  display: flex;
+  flex-wrap: wrap;
+  background: white;
+  width: 90%;
+  max-width: 900px;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  gap: 30px;
+}
+
+.contact-info {
+  flex: 1;
+  text-align: left;
+}
+
+.contact-info h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.contact-info p span {
+  font-size: 18px;
+  color: #1f3d7a;
+}
+
+.newsletter input,
+.newsletter button {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.newsletter button {
+  background: #1f3d7a;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.newsletter button:hover {
+  background: #16305a;
+}
+
+/* Desna Sekcija: Kontakt Forma */
+.contact-form {
+  flex: 1;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.contact-form button {
+  padding: 10px;
+  background-color: #1f3d7a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #16305a;
+}
+
+.close {
+  position: absolute;
+  font-size: 12px;
+  color: #8a8383;
+  cursor: pointer; 
+  top: 10px; 
+  right: 15px; 
+}
+
+.close:hover {
+  color: #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .modal-content {
+    flex-direction: column;
+  }
+}
+
 </style>
+<script>
+   // JavaScript za modal
+  const modal = document.getElementById("modal");
+  const openModalBtn = document.getElementById("openModal");
+  const closeModalBtn = document.getElementById("closeModal");
+
+  // Otvori modal
+  openModalBtn?.addEventListener("click", () => {
+    modal.style.display = "flex";
+  });
+
+  // Zatvori modal (klik na X)
+  closeModalBtn?.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  // Zatvori modal klikom izvan sadržaja
+  window?.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+
+</script>
