@@ -21,6 +21,14 @@ import MapComponent from "../components/MapComponent";
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 </head>
 <body>
+ <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+    }
+    </script>
+    
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <div id="google_translate_element"></div>
     <Header />
     <main>
         <MapComponent client:load/>
