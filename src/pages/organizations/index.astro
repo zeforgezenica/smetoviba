@@ -34,12 +34,10 @@ function isOpen(workHours: string): boolean {
 													${!isOpen(post.data.workHours) ? 'filter grayscale' : ''}`}/>
                                         </div>
                                         <div class="org-content flex flex-col justify-center items-start flex-grow p-4">
-											<h4 class="title font-bold font-exo2 text-lg sm:text-base md:text-xl lg:text-2xl xl:text-3xl font-bold">{post.data.title}</h4>
+											<h4 class="title font-exo2 text-lg sm:text-base md:text-xl lg:text-2xl xl:text-3xl font-bold">{post.data.title}</h4>
 											<h5 class="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-gray-600">Radno vrijeme: {post.data.workHours}</h5>
-											<h5 
-												class={`text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-bold 
-													${isOpen(post.data.workHours) ? 'text-pastel-green' : 'text-tomato-red'}`}
-											>
+											<h5 class={`text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-bold 
+                                                ${isOpen(post.data.workHours) ? 'text-pastel-green' : 'text-tomato-red'}`}>
 												{isOpen(post.data.workHours) ? 'Otvoreno' : 'Zatvoreno'}
 											</h5>
 										</div>
