@@ -17,6 +17,21 @@
   --gray-gradient: rgba(var(--gray-light), 50%), #fff;
   --box-shadow: 0 2px 6px rgba(var(--gray), 25%),
     0 8px 24px rgba(var(--gray), 33%), 0 16px 32px rgba(var(--gray), 33%);
+  /* --pastel-green: #77dd77;
+  --tomato-red: #ff6347;
+  --pumpkin-orange: #f6901e; */
+}
+@font-face {
+  font-family: "Exo2";
+  src: url("/fonts/Exo2-VariableFont_wght.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Exo2";
+  src: url("/fonts/Exo2-Italic-VariableFont_wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
 }
 @font-face {
   font-family: "Atkinson";
@@ -46,10 +61,7 @@ body {
   line-height: 1.7;
 }
 main {
-  width: 720px;
-  max-width: calc(100% - 2em);
-  margin: auto;
-  padding: 3em 1em;
+  width: 100%;
 }
 h1,
 h2,
@@ -105,7 +117,6 @@ table {
 img {
   max-width: 100%;
   height: auto;
-  border-radius: 8px;
 }
 code {
   padding: 2px 5px;
@@ -137,9 +148,6 @@ ul {
   body {
     font-size: 18px;
   }
-  main {
-    padding: 1em;
-  }
 }
 
 .sr-only {
@@ -158,4 +166,20 @@ ul {
   clip-path: inset(50%);
   /* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
   white-space: nowrap;
+}
+
+.shadow-gradient {
+  position: relative;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.shadow-gradient::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, lightgray);
 }
