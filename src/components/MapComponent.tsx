@@ -1,7 +1,12 @@
 import { useEffect } from "react";
 import "leaflet/dist/leaflet.css";
+import type { MapPin } from "../models/map.pin.model";
 
-export default function MapComponent() {
+interface MapComponentProps {
+  pins: MapPin[];
+}
+
+export default function MapComponent({ pins }: MapComponentProps) {
   useEffect(() => {
     async function loadLeaflet() {
       if (typeof window !== "undefined") {
@@ -21,6 +26,10 @@ export default function MapComponent() {
         L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
           attribution: "© OpenStreetMap contributors",
         }).addTo(map);
+
+        pins.forEach((pin) => {
+          L.marker(pin.location).addTo(map).bindPopup(pin.title).openPopup();
+        });
 
         L.marker([44.24541, 17.96368])
           .addTo(map)
