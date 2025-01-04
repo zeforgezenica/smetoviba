@@ -6,6 +6,13 @@ interface MapComponentProps {
   pins: MapPin[];
 }
 
+const smetoviPin: MapPin = {
+  type: "Izletište",
+  title: "Izletište Smetovi",
+  location: [44.24541, 17.96368],
+  img: "/images/smetovi-spomenik.jpg",
+};
+
 export default function MapComponent({ pins }: MapComponentProps) {
   useEffect(() => {
     async function loadLeaflet() {
@@ -28,27 +35,78 @@ export default function MapComponent({ pins }: MapComponentProps) {
         }).addTo(map);
 
         pins.forEach((pin) => {
-          L.marker(pin.location).addTo(map).bindPopup(pin.title).openPopup();
+          const popupContent = `
+            <div
+              class="flex flex-col items-center"
+              style="width: 200px; padding-bottom: 5px;"
+            >
+              <img
+                src="${pin.img}"
+                alt="${pin.title}"
+                class="w-full h-auto mb-2"
+                style="max-width: 200px; max-height: 200px;"
+              />
+              <a
+                href="${pin.path}"
+                class="text-center w-full"
+                style="word-wrap: break-word; padding-inline:5px;"
+              > ${pin.title} </a>
+            </div> `;
+
+          L.marker(pin.location).addTo(map).bindPopup(popupContent).openPopup();
         });
 
-        L.marker([44.24541, 17.96368])
+        L.marker(smetoviPin.location)
           .addTo(map)
-          .bindPopup("Izletište Smetovi")
+          .bindPopup(
+            `
+              <div
+                class="flex flex-col items-center"
+                style="width: 200px; padding-bottom: 5px;"
+              >
+                <img
+                  src="${smetoviPin.img}"
+                  alt="${smetoviPin.title}"
+                  class="w-full h-auto mb-2"
+                  style="max-width: 200px; max-height: 200px;"
+                />
+                <div
+                  class="text-center w-full"
+                  style="word-wrap: break-word; padding-inline:5px;"
+                > ${smetoviPin.title} </div>
+              </div>
+  `
+          )
           .openPopup();
       }
     }
 
     loadLeaflet();
-  }, []);
+  }, [pins]);
 
   return (
-    <div
-      id="map"
-      style={{
-        height: "100vh",
-        width: "100vw",
-        marginTop: "1em",
-      }}
-    />
+    <>
+      <div
+        id="map"
+        style={{
+          height: "100vh",
+          width: "100vw",
+          marginTop: "1em",
+        }}
+      />
+      <style>
+        {`
+          .leaflet-popup-content {
+            margin: 0 !important;
+            width: 200px !important;
+          }
+          .leaflet-popup-content-wrapper {
+            overflow: hidden;
+            padding: 0 !important;
+            text-align: center !important;
+          }
+        `}
+      </style>
+    </>
   );
 }
