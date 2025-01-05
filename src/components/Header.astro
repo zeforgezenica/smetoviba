@@ -2,9 +2,9 @@
 import HeaderLink from './HeaderLink.astro';
 ---
 
-<header class="fixed top-0 left-0 blur-background w-full shadow-md z-10">
-	<nav>
-		<img id="navbar-logo" src="/smetovi-logo.png" alt="Smetovi Logo" class="p-2">
+<header class="fixed top-0 left-0 blur-background w-full shadow-md z-10 h-14 flex items-center">
+	<nav class="flex items-center justify-around h-full w-full flex items-center p-0">
+		<img id="navbar-logo" src="/smetovi-logo.png" alt="Smetovi Logo" class="p-2" style="width: 20vw;">
 		<div class="internal-links">
 			<HeaderLink href="/map">Mapa</HeaderLink>
 			<HeaderLink href="/">Home</HeaderLink>
@@ -37,19 +37,9 @@ import HeaderLink from './HeaderLink.astro';
 	</nav>
 </header>
 <style>
-
-	header {
-		max-height: 54px;
-	}
-	nav {
-		display: flex;
-		align-items: center;
-		justify-content: space-around;
-	}
 	nav a, .weather {
 		padding: 0 0.5em;
 	}
-	
 	.internal-links a {
 		color: var(--black);
 		border-bottom: 4px solid transparent;
@@ -63,9 +53,5 @@ import HeaderLink from './HeaderLink.astro';
 	.internal-links a {
 		transition: border-bottom-color 0.3s ease-in-out;
 	}
-
-	nav img {
-		width: 20vw;
-	}
-
+	
 </style>
