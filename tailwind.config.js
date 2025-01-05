@@ -7,6 +7,10 @@ export default {
         "pastel-green": "#77dd77",
         "tomato-red": "#ff6347",
       },
+      width: {
+        "20vw": "20vw",
+        "35vw": "35vw",
+      },
     },
   },
   plugins: [require("@tailwindcss/aspect-ratio")],

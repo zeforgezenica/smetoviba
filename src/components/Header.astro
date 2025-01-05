@@ -3,55 +3,70 @@ import HeaderLink from './HeaderLink.astro';
 ---
 
 <header class="fixed top-0 left-0 blur-background w-full shadow-md z-10 h-14 flex items-center">
-	<nav class="flex items-center justify-around h-full w-full flex items-center p-0">
-		<img id="navbar-logo" src="/smetovi-logo.png" alt="Smetovi Logo" class="p-2" style="width: 20vw;">
-		<div class="internal-links">
-			<HeaderLink href="/map">Mapa</HeaderLink>
-			<HeaderLink href="/">Home</HeaderLink>
-			<HeaderLink href="/blog">Blog</HeaderLink>
-			<HeaderLink href="/organizations">Aktivnosti</HeaderLink>
-			<HeaderLink href="/events">Događaji</HeaderLink>
-			<HeaderLink>Kontakt</HeaderLink>
-		</div>
-		
-		<div class="flex">
-			<div class="weather flex items-center justify-center">
+    <nav class="flex items-center justify-around h-full w-full flex items-center p-0">
+        <img id="navbar-logo" src="/smetovi-logo.png" alt="Smetovi Logo" class="p-2 w-35vw md:w-20vw">
+        <div class="internal-links">
+            <HeaderLink href="/map">Mapa</HeaderLink>
+            <HeaderLink href="/">Home</HeaderLink>
+            <HeaderLink href="/blog">Blog</HeaderLink>
+            <HeaderLink href="/organizations">Aktivnosti</HeaderLink>
+            <HeaderLink href="/events">Događaji</HeaderLink>
+            <HeaderLink>Kontakt</HeaderLink>
+        </div>
+        
+        <div class="flex">
+            <div class="weather flex items-center justify-center">
+                <img 
+                    src="https://icons.veryicon.com/png/o/miscellaneous/alibaba-enterprise-intelligence-general-basic/weather-unknown-1.png" 
+                    alt="Trenutno vrijeme" 
+                    style="max-height: 32px; max-width: 32px;"
+                >
+            </div>	
+            <a 
+                href="https://github.com/zeforgezenica/smetoviba" 
+                target="_blank" 
+                class="flex items-center justify-center"
+            >
+                <span class="sr-only">Go to Astro's GitHub repo</span>
+                <img 
+                    src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" 
+                    alt="GitHub" 
+                    style="max-width: 32px; max-height: 32px;">
+            </a>
+			<div class="burger-menu hidden">
 				<img 
-					src="https://icons.veryicon.com/png/o/miscellaneous/alibaba-enterprise-intelligence-general-basic/weather-unknown-1.png" 
-					alt="Trenutno vrijeme" 
-					style="max-height: 32px; max-width: 32px;"
-				>
-			</div>	
-			<a 
-				href="https://github.com/zeforgezenica/smetoviba" 
-				target="_blank" 
-				class="flex items-center justify-center"
-			>
-				<span class="sr-only">Go to Astro's GitHub repo</span>
-				<img 
-					src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" 
-					alt="GitHub" 
-					style="max-width: 32px; max-height: 32px;">
-			</a>
-		</div>
-	</nav>
+					src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/640px-Hamburger_icon.svg.png" 
+					alt="Menu" 
+					style="width: 32px; height: 32px;">
+			</div>
+        </div>
+    </nav>
 </header>
 <style>
-	nav a, .weather {
-		padding: 0 0.5em;
-	}
-	.internal-links a {
-		color: var(--black);
-		border-bottom: 4px solid transparent;
-		text-decoration: none;
-		font-size: 18px;
-	}
-	.internal-links a:hover {
-		border-bottom: 4px solid var(--pumpkin-orange);
-		transition: border-bottom-color 0.3s ease-in-out;
-	}
-	.internal-links a {
-		transition: border-bottom-color 0.3s ease-in-out;
-	}
-	
+    nav a, .weather {
+        padding: 0 0.5em;
+    }
+    .internal-links a {
+        color: var(--black);
+        border-bottom: 4px solid transparent;
+        text-decoration: none;
+        font-size: 18px;
+    }
+    .internal-links a:hover {
+        border-bottom: 4px solid var(--pumpkin-orange);
+        transition: border-bottom-color 0.3s ease-in-out;
+    }
+    .internal-links a {
+        transition: border-bottom-color 0.3s ease-in-out;
+    }
+    
+    /* Media query for medium and small screens */
+    @media (max-width: 768px) {
+        .internal-links {
+            display: none;
+        }
+        .burger-menu {
+            display: block;
+        }
+    }
 </style>
