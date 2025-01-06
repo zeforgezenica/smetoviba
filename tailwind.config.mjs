@@ -11,6 +11,7 @@ export default {
         "20vw": "20vw",
         "35vw": "35vw",
       },
+      fontFamily: { exo2: ['"Exo2"', "sans-serif"] },
     },
   },
   plugins: [require("@tailwindcss/aspect-ratio")],
