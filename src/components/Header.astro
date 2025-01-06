@@ -63,13 +63,14 @@ import Weather from './WeatherComponent';
 </div>
 
 <style>
-    header {
-        z-index: 1010;
-    }
+  header {
+      z-index: 1010;
+  }
   nav a, .weather {
     padding: 0 0.3em;
   }
   .internal-links a {
+    padding-bottom: 5px;
     color: var(--black);
     border-bottom: 4px solid transparent;
     text-decoration: none;
@@ -78,15 +79,19 @@ import Weather from './WeatherComponent';
     transition:
       border-bottom-color 0.3s ease-in-out, 
       border-inline-color 0.3s ease-in-out;
-    }
+		display: inline-block;
+		text-decoration: none;
+  }
   .internal-links a:hover {
     border-bottom: 4px solid var(--pumpkin-orange);
     border-inline: 4px solid transparent;
     transition:
       border-bottom-color 0.3s ease-in-out,
       border-inline-color 0.3s ease-in-out;
-    }
-  .internal-links a {
-    transition: border-bottom-color 0.3s ease-in-out;
   }
+  .internal-links a.active {
+		font-weight: bolder;
+		border-bottom: 4px solid var(--pumpkin-orange) !important;
+		border-inline: 4px solid transparent !important;
+	}
 </style>
