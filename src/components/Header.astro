@@ -1,72 +1,87 @@
 ---
 import HeaderLink from './HeaderLink.astro';
+import BurgerMenu from './BurgerMenu.tsx';
 ---
 
-<header class="fixed top-0 left-0 blur-background w-full shadow-md z-10 h-14 flex items-center">
-    <nav class="flex items-center justify-around h-full w-full flex items-center p-0">
-        <img id="navbar-logo" src="/smetovi-logo.png" alt="Smetovi Logo" class="p-2 w-35vw md:w-20vw">
-        <div class="internal-links">
-            <HeaderLink href="/map">Mapa</HeaderLink>
-            <HeaderLink href="/">Home</HeaderLink>
-            <HeaderLink href="/blog">Blog</HeaderLink>
-            <HeaderLink href="/organizations">Aktivnosti</HeaderLink>
-            <HeaderLink href="/events">Događaji</HeaderLink>
-            <HeaderLink>Kontakt</HeaderLink>
-        </div>
-        
-        <div class="flex">
-            <div class="weather flex items-center justify-center">
-                <img 
-                    src="https://icons.veryicon.com/png/o/miscellaneous/alibaba-enterprise-intelligence-general-basic/weather-unknown-1.png" 
-                    alt="Trenutno vrijeme" 
-                    style="max-height: 32px; max-width: 32px;"
-                >
-            </div>	
-            <a 
-                href="https://github.com/zeforgezenica/smetoviba" 
-                target="_blank" 
-                class="flex items-center justify-center"
-            >
-                <span class="sr-only">Go to Astro's GitHub repo</span>
-                <img 
-                    src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" 
-                    alt="GitHub" 
-                    style="max-width: 32px; max-height: 32px;">
-            </a>
-			<div class="burger-menu hidden">
-				<img 
-					src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/640px-Hamburger_icon.svg.png" 
-					alt="Menu" 
-					style="width: 32px; height: 32px;">
-			</div>
-        </div>
-    </nav>
+<script is:inline> 
+  document.addEventListener('DOMContentLoaded', () => { 
+    const menuButton = document.getElementById('menu-button'); 
+    const menuContainer = document.getElementById('menu-container'); 
+    menuButton?.addEventListener('click', () => { 
+      menuContainer.classList.toggle('hidden'); 
+      const isHidden = menuContainer.classList.contains('hidden');
+      menuButton.querySelector('img').src = isHidden 
+        ? 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/640px-Hamburger_icon.svg.png' 
+        : 'https://static.thenounproject.com/png/636011-200.png'; 
+    });
+  }); 
+</script>
+
+<header class="fixed top-0 left-0 blur-background w-full shadow-md h-14 flex items-center">
+  <nav class="flex items-center justify-around h-full w-full flex items-center p-0">
+    <img id="navbar-logo" src="/smetovi-logo.png" alt="Smetovi Logo" class="p-2 w-35vw md:w-20vw lg:w-64">
+    <div class="internal-links hidden md:block">
+      <HeaderLink href="/map">Mapa</HeaderLink>
+      <HeaderLink href="/">Home</HeaderLink>
+      <HeaderLink href="/blog">Blog</HeaderLink>
+      <HeaderLink href="/organizations">Aktivnosti</HeaderLink>
+      <HeaderLink href="/events">Događaji</HeaderLink>
+      <HeaderLink href="/contact">Kontakt</HeaderLink>
+    </div>
+
+    <div class="flex">
+      <div class="weather flex items-center justify-center">
+        <img 
+          src="https://icons.veryicon.com/png/o/miscellaneous/alibaba-enterprise-intelligence-general-basic/weather-unknown-1.png" 
+          alt="Trenutno vrijeme" 
+          style="max-height: 32px; max-width: 32px;"
+        >
+      </div>  
+      <a 
+        href="https://github.com/zeforgezenica/smetoviba" 
+        target="_blank" 
+        class="flex items-center justify-center"
+      >
+        <span class="sr-only">Go to Astro's GitHub repo</span>
+        <img 
+          src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" 
+          alt="GitHub" 
+          style="max-width: 32px; max-height: 32px;"
+        >
+      </a>
+      <div class="block md:hidden" id="menu-button" style="cursor: pointer;">
+        <img 
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/640px-Hamburger_icon.svg.png" 
+          alt="Menu" 
+          style="width: 32px; height: 32px;"
+        >
+      </div>
+    </div>
+  </nav>
 </header>
+
+<div id="menu-container" class="hidden md:hidden">
+  <BurgerMenu client:load />
+</div>
+
 <style>
-    nav a, .weather {
-        padding: 0 0.5em;
+    header {
+        z-index: 1010;
     }
-    .internal-links a {
-        color: var(--black);
-        border-bottom: 4px solid transparent;
-        text-decoration: none;
-        font-size: 18px;
-    }
-    .internal-links a:hover {
-        border-bottom: 4px solid var(--pumpkin-orange);
-        transition: border-bottom-color 0.3s ease-in-out;
-    }
-    .internal-links a {
-        transition: border-bottom-color 0.3s ease-in-out;
-    }
-    
-    /* Media query for medium and small screens */
-    @media (max-width: 768px) {
-        .internal-links {
-            display: none;
-        }
-        .burger-menu {
-            display: block;
-        }
-    }
+  nav a, .weather {
+    padding: 0 0.5em;
+  }
+  .internal-links a {
+    color: var(--black);
+    border-bottom: 4px solid transparent;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  .internal-links a:hover {
+    border-bottom: 4px solid var(--pumpkin-orange);
+    transition: border-bottom-color 0.3s ease-in-out;
+  }
+  .internal-links a {
+    transition: border-bottom-color 0.3s ease-in-out;
+  }
 </style>

@@ -17,16 +17,6 @@ const pins: MapPin[] = organizations.map(org => ({
   img: org.data.heroImage,
 }));
 ---
-
-<style>
-    main {
-        height: 100vh;
-        width: 100vw;
-        padding: 1em 0;
-        margin: 2em 0;
-    }
-</style>
-
 <html>
 <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
@@ -39,3 +29,10 @@ const pins: MapPin[] = organizations.map(org => ({
     <Footer />
   </body>
 </html>
+
+<style>
+    main {
+        height: 100vh;
+        width: 100vw;
+    }
+</style>

@@ -91,7 +91,6 @@ export default function MapComponent({ pins }: MapComponentProps) {
         style={{
           height: "100vh",
           width: "100vw",
-          marginTop: "1em",
         }}
       />
       <style>
@@ -104,6 +103,9 @@ export default function MapComponent({ pins }: MapComponentProps) {
             overflow: hidden;
             padding: 0 !important;
             text-align: center !important;
+          }
+          .leaflet-top {
+            margin-top: 54px !important;
           }
         `}
       </style>
