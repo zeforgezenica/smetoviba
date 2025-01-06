@@ -40,7 +40,7 @@ export const Weather: React.FC = () => {
         const data = response.data.current_weather;
         setWeather({
           temp: data.temperature,
-          weatherCode: 99,
+          weatherCode: data.weathercode,
         });
         setLoading(false);
       })
