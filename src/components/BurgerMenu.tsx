@@ -94,8 +94,8 @@ const BurgerMenu: React.FC = () => {
             font-weight: bold;
           }
           .links a:hover {
-            border-bottom: 4px solid var(--pumpkin-orange);
-            border-bottom-height: 4px;
+            border-bottom: 3px solid var(--pumpkin-orange);
+            border-inline: 16px solid transparent;
             transition: border-bottom-color 0.3s ease-in-out;
           }
         `}

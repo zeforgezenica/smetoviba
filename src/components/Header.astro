@@ -1,6 +1,7 @@
 ---
 import HeaderLink from './HeaderLink.astro';
 import BurgerMenu from './BurgerMenu.tsx';
+import Weather from './WeatherComponent';
 ---
 
 <script is:inline> 
@@ -28,15 +29,11 @@ import BurgerMenu from './BurgerMenu.tsx';
       <HeaderLink href="/events">Događaji</HeaderLink>
       <HeaderLink href="/contact">Kontakt</HeaderLink>
     </div>
-
     <div class="flex">
-      <div class="weather flex items-center justify-center">
-        <img 
-          src="https://icons.veryicon.com/png/o/miscellaneous/alibaba-enterprise-intelligence-general-basic/weather-unknown-1.png" 
-          alt="Trenutno vrijeme" 
-          style="max-height: 32px; max-width: 32px;"
-        >
+      <div class="weather flex flex-col justify-center items-center">
+        <Weather client:load/>
       </div>  
+      <!-- Move this to contact page pls
       <a 
         href="https://github.com/zeforgezenica/smetoviba" 
         target="_blank" 
@@ -48,7 +45,8 @@ import BurgerMenu from './BurgerMenu.tsx';
           alt="GitHub" 
           style="max-width: 32px; max-height: 32px;"
         >
-      </a>
+      </a> 
+      -->
       <div class="block md:hidden" id="menu-button" style="cursor: pointer;">
         <img 
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/640px-Hamburger_icon.svg.png" 
@@ -79,6 +77,7 @@ import BurgerMenu from './BurgerMenu.tsx';
   }
   .internal-links a:hover {
     border-bottom: 4px solid var(--pumpkin-orange);
+    border-inline: 4px solid transparent;
     transition: border-bottom-color 0.3s ease-in-out;
   }
   .internal-links a {
