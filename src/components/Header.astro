@@ -4,18 +4,21 @@ import BurgerMenu from './BurgerMenu.tsx';
 import Weather from './WeatherComponent';
 ---
 
-<script is:inline> 
-  document.addEventListener('DOMContentLoaded', () => { 
-    const menuButton = document.getElementById('menu-button'); 
-    const menuContainer = document.getElementById('menu-container'); 
-    menuButton?.addEventListener('click', () => { 
-      menuContainer.classList.toggle('hidden'); 
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const menuButton = document.getElementById('menu-button');
+    const menuContainer = document.getElementById('menu-container');
+    menuButton?.addEventListener('click', () => {
+      menuContainer.classList.toggle('hidden');
       const isHidden = menuContainer.classList.contains('hidden');
-      menuButton.querySelector('img').src = isHidden 
-        ? 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/640px-Hamburger_icon.svg.png' 
-        : 'https://static.thenounproject.com/png/636011-200.png'; 
+      const icon = menuButton.querySelector('i');
+      if (icon) {
+        icon.className = isHidden
+        ? 'fa-solid fa-bars'
+        : 'fa-solid fa-xmark';
+      }
     });
-  }); 
+  });
 </script>
 
 <header class="fixed top-0 left-0 blur-background w-full shadow-md h-14 flex items-center">
@@ -30,7 +33,7 @@ import Weather from './WeatherComponent';
       <HeaderLink href="/contact">Kontakt</HeaderLink>
     </div>
     <div class="flex">
-      <div class="weather flex flex-col justify-center items-center">
+      <div class="weather flex flex-col justify-center items-center mr-2">
         <Weather client:load/>
       </div>  
       <!-- Move this to contact page and footer pls
@@ -48,11 +51,7 @@ import Weather from './WeatherComponent';
       </a> 
       -->
       <div class="block md:hidden" id="menu-button" style="cursor: pointer;">
-        <img 
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/640px-Hamburger_icon.svg.png" 
-          alt="Menu" 
-          style="width: 32px; height: 32px;"
-        >
+        <i class="fa-solid fa-bars" style="font-size: 32px; position: relative; top:2px;"></i>
       </div>
     </div>
   </nav>
@@ -94,4 +93,8 @@ import Weather from './WeatherComponent';
 		border-bottom: 4px solid var(--pumpkin-orange) !important;
 		border-inline: 4px solid transparent !important;
 	}
+  #menu-button:hover {
+    cursor: pointer;
+    color: var(--pumpkin-orange);
+  }
 </style>
