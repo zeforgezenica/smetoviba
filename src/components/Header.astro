@@ -33,7 +33,7 @@ import Weather from './WeatherComponent';
       <div class="weather flex flex-col justify-center items-center">
         <Weather client:load/>
       </div>  
-      <!-- Move this to contact page pls
+      <!-- Move this to contact page and footer pls
       <a 
         href="https://github.com/zeforgezenica/smetoviba" 
         target="_blank" 
@@ -67,19 +67,25 @@ import Weather from './WeatherComponent';
         z-index: 1010;
     }
   nav a, .weather {
-    padding: 0 0.5em;
+    padding: 0 0.3em;
   }
   .internal-links a {
     color: var(--black);
     border-bottom: 4px solid transparent;
     text-decoration: none;
     font-size: 18px;
-  }
+    border-inline: 4px solid transparent;
+    transition:
+      border-bottom-color 0.3s ease-in-out, 
+      border-inline-color 0.3s ease-in-out;
+    }
   .internal-links a:hover {
     border-bottom: 4px solid var(--pumpkin-orange);
     border-inline: 4px solid transparent;
-    transition: border-bottom-color 0.3s ease-in-out;
-  }
+    transition:
+      border-bottom-color 0.3s ease-in-out,
+      border-inline-color 0.3s ease-in-out;
+    }
   .internal-links a {
     transition: border-bottom-color 0.3s ease-in-out;
   }

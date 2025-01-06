@@ -88,7 +88,10 @@ const BurgerMenu: React.FC = () => {
             text-decoration: none;
             color: #333;
             font-size: 18px;
-            width: 100%;
+            width: 100%;border-inline: 16px solid transparent;
+            transition:
+              border-bottom-color 0.3s ease-in-out,
+              border-inline-color 0.3s ease-in-out;
           }
           .links a.active {
             font-weight: bold;
@@ -96,7 +99,9 @@ const BurgerMenu: React.FC = () => {
           .links a:hover {
             border-bottom: 3px solid var(--pumpkin-orange);
             border-inline: 16px solid transparent;
-            transition: border-bottom-color 0.3s ease-in-out;
+            transition:
+              border-bottom-color 0.3s ease-in-out,
+              border-inline-color 0.3s ease-in-out;
           }
         `}
       </style>
