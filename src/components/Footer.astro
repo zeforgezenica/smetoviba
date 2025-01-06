@@ -3,55 +3,128 @@ const today = new Date();
 
 const { title, description, image = '/bgfooteribg.png' } = Astro.props;
 const { title2, description2, image2 = '/bgfootersmall.png' } = Astro.props;
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 ---
 
 <footer>
 	<br>
 	<div class="image"></div>
-	<div class="maincontainer">
-	<div class="container1">
-		<h3>KONTAKT INFORMACIJE</h3>
-		<p>Smetovi, Zenica, Bosna i Hercegovina</p>
-		<p>061 604 148</p>
-		<p>mail@gmail.com</p>
-		</div>
-	<div class="container2">
-			<h3>NEWSLETTER</h3>
-			<p>Enter your email:</p>
-			<input placeholder="johndoe@gmail.com"/>
+	<div class="flex flex-col justify-center items-center">
+		<div class="maincontainer">
+			<div class="container1">
+				<h3 class="font-exo2">KONTAKT INFORMACIJE</h3>
+				
+				<h4>Udruženje Programerska kovačnica ZeForge Zenica</h4>
+				<a href="https://github.com/zeforgezenica/smetoviba">
+					<i class="fa-brands fa-github"></i>
+					smetoviba
+				</a>
+				<a href="https://maps.app.goo.gl/Sdj4hDePPtsDJzUW8">
+					<i class="fa-solid fa-location-dot"></i>
+					Školska 10, 72000 Zenica, Bosna i Hercegovina
+				</a>
+				<a href="tel:38732979844">
+					<i class="fa-solid fa-phone"></i>
+					032 979 844
+				</a>
+				<a href="mailto:info@zeforge.ba">
+					<i class="fa-solid fa-envelope"></i>
+					info@zeforge.ba
+				</a>
+			</div>
+			<div class="container2">
+				<h3 class="font-exo2">NEWSLETTER</h3>
+				<!-- Add form action -->
+				<form action="" class="newsletter-form">
+					<input placeholder="e-mail" class="email-input"/>
+					<button class="submit-newsletter">
+						<i class="fa-solid fa-arrow-right"></i>
+					</button>
+				</form>
 			</div>
 		</div>
-<center>	&copy; Smetovi {today.getFullYear()} </center></div>
-</div>
+		<div class="copyright text-center p-2">
+			&copy; Smetovi {today.getFullYear()} | Powered by ZeForge - Developers Community of Zenica
+		</div>
+	</div>
 </footer>
 <style define:vars={{ image: `url("${image}")` , image2:`url("${image2}")`  }}>
 
 	.image {
-
 		background-image: var(--image);
 		background-size:cover;
 		height:350px;
 	}
 	h3{
-		color:white;
+		color:#eee;
+		margin-bottom: 20px;
 	}
-	input{
-
-		padding:10px;
-		border-radius:15px;
-		border:0;
+	h4{
+		color:#ccc;
+		font-size: 22px;
+		margin-bottom: 10px;
+	}
+	.maincontainer a{
+		color: var(--gray);
+		text-decoration: none;
+	}
+	.container1 i {
+		width: 20px;
+		text-align: center;
+		margin-right: 5px;
+	}
+	.newsletter-form{
+		display: flex;
+		flex-direction: row;
+		
+	}
+	.email-input{
+		padding: 0px 10px;
+		flex-grow: 1;
+	}
+	.email-input::placeholder{
+		color: #eee;
+	}
+	.email-input:focus{
+		outline: none;
+	}
+	.submit-newsletter{
+		padding: 0 10px;
+		cursor: pointer;
+		text-align: center;
+	}
+	.submit-newsletter i{
+		position: relative;
+		top: 2px;
+	}
+	.submit-newsletter:hover{
+		background-color: #2e2f69;
 	}
 	.maincontainer{
 		background-color:#171440;
 		padding:20px;
 		color: rgb(var(--gray));
 		display: flex;
-		align-items: flex-start; 
-		text-align:center;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
 	}
 	.container1,.container2{
-		width:50%;
+		width: 40%;
+		display: flex	;
+		flex-direction: column;
+		justify-content: flex-start;
+		margin-bottom: auto;
+	}
+	.email-input, .submit-newsletter{
+		background-color: var(--gray-light);
+		color: #eee;
+	}
+	.copyright{
+		width: 100%;
+		background-color:#171440 !important	;
+		color: #eee
 	}
 	@media (max-width: 768px){
   .maincontainer {
