@@ -9,138 +9,66 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 
 <footer>
 	<br>
-	<div class="image"></div>
-	<div class="flex flex-col justify-center items-center">
-		<div class="maincontainer">
-			<div class="container1">
-				<h3 class="font-exo2">KONTAKT INFORMACIJE</h3>
+	<div class="image bg-[image:var(--image2)] md:bg-[image:var(--image)] bg-cover h-[450px] md:h-[350px] w-full bg-[50%_5%] bg-no-repeat"></div>
+	<div class="flex flex-col justify-center items-center bg-footer">
+		<div class="maincontainer text-gray flex flex-col md:flex-row items-center justify-center w-full p-5">
+			<div class="w-full mb-5 md:w-2/5 md:mb-0 flex flex-col justify-start">
+				<h3 class="font-exo2 text-[#eee] mb-5">
+					KONTAKT INFORMACIJE
+				</h3>
 				
-				<h4>Udruženje Programerska kovačnica ZeForge Zenica</h4>
-				<a href="https://github.com/zeforgezenica/smetoviba">
-					<i class="fa-brands fa-github"></i>
-					smetoviba
+				<h4 class="text-[#ccc] text-xl mb-2">
+					Udruženje Programerska kovačnica ZeForge Zenica
+				</h4>
+
+				<a
+					href="https://github.com/zeforgezenica/smetoviba"
+					class="text-gray flex flex-row no-underline text-m"
+				>
+					<i class="fa-brands fa-github w-5 text-center mr-[5px] relative top-[5px]"></i>
+					<p>smetoviba</p>
 				</a>
-				<a href="https://maps.app.goo.gl/Sdj4hDePPtsDJzUW8">
-					<i class="fa-solid fa-location-dot"></i>
-					Školska 10, 72000 Zenica, Bosna i Hercegovina
+				<a
+					href="https://maps.app.goo.gl/Sdj4hDePPtsDJzUW8"
+					class="text-gray flex flex-row no-underline text-m"
+				>
+					<i class="fa-solid fa-location-dot w-5 text-center mr-[5px] relative top-[5px]"></i>
+					<p>Školska 10, 72000 Zenica, Bosna i Hercegovina</p>
 				</a>
-				<a href="tel:38732979844">
-					<i class="fa-solid fa-phone"></i>
-					032 979 844
+				<a
+					href="tel:38732979844"
+					class="text-gray flex flex-row no-underline text-m"
+				>
+					<i class="fa-solid fa-phone w-5 text-center mr-[5px] relative top-[5px]"></i>
+					<p>032 979 844</p>
 				</a>
-				<a href="mailto:info@zeforge.ba">
-					<i class="fa-solid fa-envelope"></i>
-					info@zeforge.ba
+				<a
+					href="mailto:info@zeforge.ba"
+					class="text-gray flex flex-row no-underline text-m"
+				>
+					<i class="fa-solid fa-envelope w-5 text-center mr-[5px] relative top-[5px]"></i>
+					<p>info@zeforge.ba</p>
 				</a>
 			</div>
-			<div class="container2">
-				<h3 class="font-exo2">NEWSLETTER</h3>
+			<div class="w-full md:w-2/5 flex flex-col justify-start mb-auto">
+				<h3 class="font-exo2 text-[#eee] mb-5">NEWSLETTER</h3>
 				<!-- Add form action -->
-				<form action="" class="newsletter-form">
-					<input placeholder="e-mail" class="email-input"/>
-					<button class="submit-newsletter">
-						<i class="fa-solid fa-arrow-right"></i>
+				<form action="" class="newsletter-form flex flex-row">
+					<input
+						placeholder="e-mail"
+						class="email-input px-2 flex-grow bg-gray-light text-[#eee] placeholder-[#eee] focus:outline-none"
+					/>
+					<button
+						class="submit-newsletter bg-gray-light text-[#eee] cursor-pointer text-center px-2.5 py-0 hover:bg-gray-hover"
+					>
+						<i class="fa-solid fa-arrow-right relative top-0.5"></i>
 					</button>
 				</form>
 			</div>
 		</div>
-		<div class="copyright text-center p-2">
+		<div class="copyright text-center p-2 w-full text-[#eee]">
 			&copy; Smetovi {today.getFullYear()} | Powered by ZeForge - Developers Community of Zenica
 		</div>
 	</div>
 </footer>
-<style define:vars={{ image: `url("${image}")` , image2:`url("${image2}")`  }}>
-
-	.image {
-		background-image: var(--image);
-		background-size:cover;
-		height:350px;
-	}
-	h3{
-		color:#eee;
-		margin-bottom: 20px;
-	}
-	h4{
-		color:#ccc;
-		font-size: 22px;
-		margin-bottom: 10px;
-	}
-	.maincontainer a{
-		color: var(--gray);
-		text-decoration: none;
-	}
-	.container1 i {
-		width: 20px;
-		text-align: center;
-		margin-right: 5px;
-	}
-	.newsletter-form{
-		display: flex;
-		flex-direction: row;
-		
-	}
-	.email-input{
-		padding: 0px 10px;
-		flex-grow: 1;
-	}
-	.email-input::placeholder{
-		color: #eee;
-	}
-	.email-input:focus{
-		outline: none;
-	}
-	.submit-newsletter{
-		padding: 0 10px;
-		cursor: pointer;
-		text-align: center;
-	}
-	.submit-newsletter i{
-		position: relative;
-		top: 2px;
-	}
-	.submit-newsletter:hover{
-		background-color: #2e2f69;
-	}
-	.maincontainer{
-		background-color:#171440;
-		padding:20px;
-		color: rgb(var(--gray));
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: 100%;
-	}
-	.container1,.container2{
-		width: 40%;
-		display: flex	;
-		flex-direction: column;
-		justify-content: flex-start;
-		margin-bottom: auto;
-	}
-	.email-input, .submit-newsletter{
-		background-color: var(--gray-light);
-		color: #eee;
-	}
-	.copyright{
-		width: 100%;
-		background-color:#171440 !important	;
-		color: #eee
-	}
-	@media (max-width: 768px){
-  .maincontainer {
-    flex-direction: column;
-  }
-  .container1,.container2{
-		width:100%;
-		padding-bottom:20px;
-	}
-	.image{
-		background-image: var(--image2);
-		width: 100%;
-		height:450px;
-  background-size: cover; 
-  background-position: 50% 5%; 
-  background-repeat: no-repeat; 
-	}
-  }
-</style>
+<style define:vars={{ image: `url("${image}")` , image2:`url("${image2}")`  }}></style>
