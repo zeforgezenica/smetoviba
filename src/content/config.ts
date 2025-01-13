@@ -22,6 +22,11 @@ const organization = defineCollection({
     contact: z.string(),
     description: z.string(),
     heroImage: z.string().optional(),
+    location: z.object({
+      lat: z.number(),
+      lng: z.number(),
+    }),
+    mapUrl: z.string(),
   }),
 });
 

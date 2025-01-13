@@ -6,7 +6,7 @@ import Footer from '../components/Footer.astro';
 
 type Props = CollectionEntry<'organization'>['data'];
 
-const { title, description, heroImage, type, workHours, phone, contact } = Astro.props;
+const { title, description, heroImage, type, workHours, phone, contact, mapUrl } = Astro.props;
 ---
 
 <html lang="en">
@@ -72,6 +72,11 @@ const { title, description, heroImage, type, workHours, phone, contact } = Astro
 						<h2 class="text-lg font-atkinson text-gray-500">Radno vrijeme: {workHours}</h2>
 						<h2 class="text-lg font-atkinson text-gray-500">Telefon: {phone}</h2>
 						<h2 class="text-lg font-atkinson text-gray-500">Kontakt: {contact}</h2>
+						<h2 class="text-lg font-atkinson text-gray-500">
+							Lokacija: <a href={
+								mapUrl
+							} class="text-blue-500 underline">Prikaži na mapi</a>
+						</h2>
 					</div>
 					<slot />
 				</div>
