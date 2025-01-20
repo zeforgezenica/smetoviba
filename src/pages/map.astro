@@ -3,19 +3,20 @@ import BaseHead from "../components/BaseHead.astro";
 import Header from '../components/Header.astro'; 
 import Footer from '../components/Footer.astro'; 
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts'; 
-
 import MapComponent from "../components/MapComponent";
+import { getCollection } from "astro:content";
+import type { MapPin } from "../models/map.pin.model";
+
+const organizations = await getCollection('organizations');
+
+const pins: MapPin[] = organizations.map(org => ({
+  type: org.data.type,
+  title: org.data.title,
+  location: org.data.location,
+  path: `/organizations/${org.slug}/`,
+  img: org.data.heroImage,
+}));
 ---
-
-<style>
-    main {
-        height: 100vh;
-        width: 100vw;
-        padding: 1em 0;
-        margin: 2em 0;
-    }
-</style>
-
 <html>
 <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
@@ -23,8 +24,15 @@ import MapComponent from "../components/MapComponent";
 <body>
     <Header />
     <main>
-        <MapComponent client:load/>
+        <MapComponent client:load {pins}/>
     </main>
     <Footer />
   </body>
 </html>
+
+<style>
+    main {
+        height: 100vh;
+        width: 100vw;
+    }
+</style>

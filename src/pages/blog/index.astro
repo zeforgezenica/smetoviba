@@ -17,21 +17,28 @@ const posts = (await getCollection('blog')).sort(
 	</head>
 	<body>
 		<Header />
-		<main>
-			<section>
-				<ul>
+        <main class="pt-24">
+            <section>
+                <ul class="space-y-6">
 					{
 						posts.map((post) => (
-							<li>
+                            <li>
 								<a href={`/blog/${post.slug}/`}>
-									<img src={post.data.heroImage} alt="" />
-									<h4 class="title">{post.data.title}</h4>
-									<p class="date">
-										<FormattedDate date={post.data.pubDate} />
-									</p>
+									<div class="organization flex flex-col md:flex-row w-4/5 mx-auto bg-white shadow-lg overflow-hidden">
+										<div class="org-image flex-none md:w-1/4 h-48 md:h-auto">
+												<img src={post.data.heroImage} alt="" class={"object-cover w-full h-full"}/>
+										</div>
+										<div class="org-content flex flex-col justify-center items-start flex-grow p-4">
+											<p class="date mb-0 text-gray-400">
+												<FormattedDate date={post.data.pubDate} />
+											</p>
+											<h4 class="title font-bold font-exo2 text-lg sm:text-base md:text-xl lg:text-2xl xl:text-3xl">{post.data.title}</h4>
+											<button>Pročitaj više</button>
+										</div>
+									</div>
 								</a>
-							</li>
-						))
+                            </li>
+                        ))
 					}
 				</ul>
 			</section>

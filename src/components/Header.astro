@@ -1,65 +1,101 @@
 ---
 import HeaderLink from './HeaderLink.astro';
-import { SITE_TITLE } from '../consts';
+import BurgerMenu from './BurgerMenu/BurgerMenu';
+import Weather from './WeatherComponent/WeatherComponent.tsx';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 ---
 
-<header>
-	<nav>
-		<img id="navbar-logo" src="/smetovi-logo.png" alt="" srcset="">
-		<div class="internal-links">
-			<HeaderLink href="/map">Mapa</HeaderLink>
-			<HeaderLink href="/">Home</HeaderLink>
-			<HeaderLink href="/blog">Blog</HeaderLink>
-			<HeaderLink href="/organizations">Aktivnosti</HeaderLink>
-			<HeaderLink href="/events">Događaji</HeaderLink>
-			<HeaderLink>Kontakt</HeaderLink>
-		</div>
-		<div class="social-links">
-			<a href="https://github.com/zeforgezenica/smetoviba" target="_blank">
-				<span class="sr-only">Go to Astro's GitHub repo</span>
-				<svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32"
-					><path
-						fill="currentColor"
-						d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
-					></path></svg
-				>
-			</a>
-		</div>
-	</nav>
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const menuButton = document.getElementById('menu-button');
+    const menuContainer = document.getElementById('menu-container');
+    menuButton?.addEventListener('click', () => {
+      menuContainer.classList.toggle('hidden');
+      const isHidden = menuContainer.classList.contains('hidden');
+      const icon = menuButton.querySelector('i');
+      if (icon) {
+        icon.className = isHidden
+        ? 'fa-solid fa-bars'
+        : 'fa-solid fa-xmark';
+      }
+    });
+  });
+</script>
+
+<header class="fixed top-0 left-0 blur-background w-full shadow-md h-14 flex items-center">
+  <nav class="flex items-center justify-around h-full w-full flex items-center p-0">
+    <img id="navbar-logo" src="/smetovi-logo.png" alt="Smetovi Logo" class="p-2 w-35vw md:w-20vw lg:w-64">
+    <div class="internal-links hidden md:block">
+      <HeaderLink href="/map">Mapa</HeaderLink>
+      <HeaderLink href="/">Home</HeaderLink>
+      <HeaderLink href="/blog">Blog</HeaderLink>
+      <HeaderLink href="/organizations">Aktivnosti</HeaderLink>
+      <HeaderLink href="/events">Događaji</HeaderLink>
+      <HeaderLink href="/contact">Kontakt</HeaderLink>
+    </div>
+    <div class="flex">
+      <div class="weather flex flex-col justify-center items-center mr-2">
+        <Weather client:load/>
+      </div>  
+      <!-- Move this to contact page and footer pls
+      <a 
+        href="https://github.com/zeforgezenica/smetoviba" 
+        target="_blank" 
+        class="flex items-center justify-center"
+      >
+        <span class="sr-only">Go to Astro's GitHub repo</span>
+        <img 
+          src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" 
+          alt="GitHub" 
+          style="max-width: 32px; max-height: 32px;"
+        >
+      </a> 
+      -->
+      <div class="block md:hidden" id="menu-button" style="cursor: pointer;">
+        <i class="fa-solid fa-bars" style="font-size: 32px; position: relative; top:2px;"></i>
+      </div>
+    </div>
+  </nav>
 </header>
+
+<div id="menu-container" class="hidden md:hidden">
+  <BurgerMenu client:load />
+</div>
+
 <style>
-	header {
-		padding: 0 1em;
-		height: 0px;
-	}
-	
-	nav {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-	}
-	nav a {
-		padding: 1em 0.5em;
-		color: var(--black);
-		border-bottom: 4px solid transparent;
+  header {
+      z-index: 1010;
+  }
+  nav a, .weather {
+    padding: 0 0.3em;
+  }
+  .internal-links a {
+    padding-bottom: 5px;
+    color: var(--black);
+    border-bottom: 4px solid transparent;
+    text-decoration: none;
+    font-size: 18px;
+    border-inline: 4px solid transparent;
+    transition:
+      border-bottom-color 0.3s ease-in-out, 
+      border-inline-color 0.3s ease-in-out;
+		display: inline-block;
 		text-decoration: none;
+  }
+  .internal-links a:hover {
+    border-bottom: 4px solid var(--pumpkin-orange);
+    border-inline: 4px solid transparent;
+    transition:
+      border-bottom-color 0.3s ease-in-out,
+      border-inline-color 0.3s ease-in-out;
+  }
+  .internal-links a.active {
+		font-weight: bolder;
+		border-bottom: 4px solid var(--pumpkin-orange) !important;
+		border-inline: 4px solid transparent !important;
 	}
-	nav a.active {
-		text-decoration: none;
-		border-bottom-color: var(--accent);
-	}
-
-	nav img {
-		width: 20vw;
-	}
-
-	.social-links,
-	.social-links a {
-		display: flex;
-	}
-	@media (max-width: 720px) {
-		.social-links {
-			display: none;
-		}
-	}
+  #menu-button:hover {
+    cursor: pointer;
+    color: var(--pumpkin-orange);
+  }
 </style>
