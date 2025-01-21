@@ -1,21 +1,36 @@
 ---
-title: "Dom izvidzaca"
-type: "izvidzacki dom"
+title: "Dom izvidžača i radioamatera"
+type: "radioamaterski i izvidžački dom"
 workHours: "0-24h"
 phone: "062150028"
-contact: "info@newaspect.ba"
-description: "Dom izvidžača smetovi"
+contact: "https://sigze.org"
+description: "Idealno mjesto za ljubitelje prirode, izviđačke aktivnosti i edukacije, smješteno u srcu predivnih Smetova."
 heroImage: "/images/organizations/izvidjacki_dom/smetovi_dom1.jpg"
 location: [44.24511883134145, 17.978530878502394]
 mapUrl: "https://www.google.com/maps/search/dom+radio+amatera+i+izvid%C5%BEa%C4%8Da+smetovi/@44.2451282,17.9783954,68m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI1MDExNS4wIKXMDSoASAFQAw%3D%3D"
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
 
-Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc. Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra massa massa ultricies mi.
+Dom izviđača i radioamatera, smješten na pitomim Smetovima, jedan je od najvažnijih objekata za ljubitelje prirode, izviđačke aktivnosti i radioamaterizam u Bosni i Hercegovini. Nalazi se na svega nekoliko kilometara od Zenice, usred predivne prirode, koja pruža savršeno okruženje za edukaciju, odmor i rekreaciju.
 
-Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
+Lokacija i prirodni ambijent
+Smetovi su poznato izletište i omiljena destinacija za planinare, izletnike i sve one koji žele pobjeći od gradske vreve i uživati u čistom zraku. Sam dom je smješten na visini koja pruža predivan pogled na okolne planine i doline, te je okružen šumom koja je bogata biljnim i životinjskim svijetom. Ovaj ambijent čini dom idealnim mjestom za sve uzraste – od djece i omladine do starijih ljubitelja prirode.
 
-Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id cursus metus aliquam eleifend mi.
+Kapacitet i sadržaji
+Dom raspolaže smještajnim kapacitetima za približno 20 osoba, što ga čini savršenim za manje grupe, izviđačke odrede, radioamaterske klubove ili porodične grupe koje žele provesti vrijeme zajedno u prirodi. U sklopu doma nalaze se prostrane zajedničke prostorije za druženje, edukaciju i radionice, dok su spavaonice opremljene osnovnim sadržajima koji omogućavaju udoban boravak.
 
-Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
+Pored toga, dom ima i potpuno opremljenu kuhinju, sanitarne čvorove te vanjski prostor koji uključuje klupe, stolove i prostor za logorske vatre. Ovi sadržaji omogućavaju organizaciju raznovrsnih aktivnosti, od izviđačkih treninga i edukativnih programa do neformalnih druženja i večeri uz vatru.
+
+Aktivnosti i značaj
+Dom izviđača i radioamatera Smetovi ima bogatu povijest i tradiciju. Organizacija izviđačkih kampova i zimovanja već godinama okuplja djecu i mlade iz cijele zemlje, pružajući im priliku da razviju vještine preživljavanja u prirodi, uče o prvoj pomoći, čvorologiji, orijentaciji i mnogim drugim izviđačkim tehnikama. Ovakve aktivnosti ne samo da pružaju nezaboravno iskustvo već i oblikuju mlade generacije, razvijajući kod njih ljubav prema prirodi, odgovornost i timski duh.
+
+Pored izviđačkih aktivnosti, dom je i središte za radioamaterske programe. Radioamateri iz cijele regije koriste dom kao bazu za svoje edukacije, takmičenja i simulacije kriznih situacija, gdje demonstriraju kako radio-komunikacija može pomoći u hitnim slučajevima. U svijetu modernih tehnologija, radioamaterizam i dalje ima značajnu ulogu u održavanju veza na daljinu, a ovaj dom služi kao ključni centar za njegovu promociju.
+
+Radno vrijeme i dostupnost
+Dom izviđača i radioamatera Smetovi otvoren je tokom cijele godine, a posjeti i korištenje prostora moguće su uz prethodnu najavu i dogovor s upravom. Iako je dom tehnički dostupan 24 sata dnevno, zbog ograničenih smještajnih kapaciteta i organiziranih aktivnosti preporučuje se pravovremena rezervacija, posebno tokom sezone kampova i vikenda.
+
+Kako doći?
+Do doma je moguće doći asfaltiranim putem koji vodi direktno iz Zenice prema Smetovima. Put je označen, a parking je dostupan u blizini doma. Posjetioci koji vole pješačenje mogu birati između nekoliko planinarskih staza koje vode do doma, pružajući priliku da uživaju u prirodnim ljepotama ovog područja.
+
+Zaključak
+Dom izviđača i radioamatera Smetovi nije samo običan objekat – on je mjesto koje okuplja ljude s istim ciljem: ljubav prema prirodi, znanju i zajednici. Bilo da tražite mjesto za edukaciju, odmor ili druženje, ovaj dom pruža sve što vam treba. S obzirom na bogatstvo aktivnosti i sadržaja koje nudi, ne čudi što je postao jedan od najvažnijih centara ovakvog tipa u regiji.
