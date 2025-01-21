@@ -1,5 +1,5 @@
 ---
-title: "Dom izvidžača i radioamatera"
+title: "Dom izviđača i radioamatera"
 type: "radioamaterski i izvidžački dom"
 workHours: "0-24h"
 phone: "062150028"
