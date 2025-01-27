@@ -3,19 +3,25 @@ title: "Restoran 960"
 type: "Restoran"
 workHours: "09-21h"
 phone: "061023454"
-contact: "info@newaspect.ba"
-description: "Lorem ipsum dolor sit amet"
+contact: "https://www.facebook.com/p/Restoran-960-100089204923936/"
+description: "Restoran 960 Smetovi nudi ugodnu atmosferu i raznovrsne specijalitete, savršene za opuštanje nakon aktivnosti na otvorenom."
 heroImage: "/images/organizations/restoran960/restoran960-naslovna.png"
 location: [44.2424448, 17.9735737]
 mapUrl: "https://maps.app.goo.gl/V9N4scBfSiUujAbf6"
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
+Restoran 960 Smetovi smješten je u prelijepom prirodnom okruženju Smetova, na nadmorskoj visini od 960 metara, po čemu je i dobio svoje ime. Ovo mjesto predstavlja savršen spoj vrhunskog kulinarskog iskustva i opuštajuće atmosfere, pružajući jedinstven doživljaj za sve posjetioce.
 
-Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc. Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra massa massa ultricies mi.
+Restoran se nalazi u neposrednoj blizini Doma izviđača i radioamatera, što ga čini idealnim odredištem za izletnike, planinare i porodice koje žele uživati u ljepotama prirode. Ambijent restorana odiše toplinom i gostoljubivošću, a prozori pružaju pogled na prekrasne šumske pejzaže i svjež planinski zrak koji dodatno doprinosi ugodnom boravku.
 
-Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
+Kuhinja restorana "960 Smetovi" poznata je po domaćim specijalitetima pripremljenim s pažnjom i ljubavlju. U ponudi se nalaze tradicionalna bosanska jela, ukusni roštilj, svježe salate i raznovrsni deserti. Posebno su popularni njihovi specijaliteti s roštilja i pite koje se pripremaju po starim receptima, dok se ponuda pića kreće od domaćih sokova do vrhunskih vina i toplih napitaka.
 
-Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id cursus metus aliquam eleifend mi.
+Za one koji preferiraju laganije obroke, restoran nudi širok izbor vegetarijanskih i zdravih opcija. Bilo da ste u potrazi za obrokom nakon aktivnog dana na planini ili želite uživati u mirnom ručku s porodicom, restoran "960 Smetovi" ima nešto za svakoga.
 
-Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
+Restoran raspolaže unutrašnjim prostorom koji je uređen u planinskom stilu, s kombinacijom drvenih i modernih elemenata. Pored unutrašnjeg prostora, tu je i prostrana terasa koja je savršena za uživanje tokom sunčanih dana.
+
+Usluga u restoranu je brza i profesionalna, a osoblje je uvijek ljubazno i spremno da preporuči jela ili pruži informacije o lokalnim atrakcijama. Također, restoran organizuje posebne događaje poput proslava, rođendana i manjih okupljanja uz prethodnu rezervaciju.
+
+Restoran se nalazi na svega nekoliko minuta hoda od glavnog puta na Smetovima, a parking je osiguran u neposrednoj blizini. Do njega je lako doći automobilom, biciklom ili pješačenjem, što ga čini dostupnim za sve posjetioce.
+
+Restoran "960 Smetovi" nije samo mjesto za objedovanje, već i prava oaza mira i uživanja u prirodi. S izvrsnom hranom, predivnim ambijentom i ljubaznom uslugom, ovo je destinacija koju ne smijete propustiti prilikom posjete Smetovima.
