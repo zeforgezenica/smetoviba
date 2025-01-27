@@ -5,7 +5,7 @@ workHours: "0-24h"
 phone: "--"
 contact: "https://trail.viadinarica.com/bs/hut/planinarski-dom-smet/17974764/#caml=8hk,2yzuw8,7bfs62,0,0"
 description: "Planinarski dom kod željezare smješten je u prirodi, idealno za ljubitelje planinarenja i prirodnih ljepota. Ovaj dom nudi udoban smještaj i ugodan ambijent za opuštanje nakon dana provedenog u prirodi."
-heroImage: "/public/images/organizations/planinarskidom/planinarskidom.jpg"
+heroImage: "/images/organizations/planinarskidom/planinarskidom.jpg"
 location: [44.24740317327731, 17.97103437111316]
 mapUrl: "https://maps.app.goo.gl/V9N4scBfSiUujAbf6"
 ---
