@@ -22,8 +22,6 @@ Restoran raspolaže unutrašnjim prostorom koji je uređen u planinskom stilu, s
 
 Usluga u restoranu je brza i profesionalna, a osoblje je uvijek ljubazno i spremno da preporuči jela ili pruži informacije o lokalnim atrakcijama. Također, restoran organizuje posebne događaje poput proslava, rođendana i manjih okupljanja uz prethodnu rezervaciju.
 
-Restoran "960 Smetovi" otvoren je svaki dan, pružajući usluge od ranog jutra do večernjih sati. Radno vrijeme je prilagođeno potrebama posjetilaca, što znači da gosti mogu uživati u doručku, ručku ili večeri.
-
 Restoran se nalazi na svega nekoliko minuta hoda od glavnog puta na Smetovima, a parking je osiguran u neposrednoj blizini. Do njega je lako doći automobilom, biciklom ili pješačenjem, što ga čini dostupnim za sve posjetioce.
 
 Restoran "960 Smetovi" nije samo mjesto za objedovanje, već i prava oaza mira i uživanja u prirodi. S izvrsnom hranom, predivnim ambijentom i ljubaznom uslugom, ovo je destinacija koju ne smijete propustiti prilikom posjete Smetovima.
