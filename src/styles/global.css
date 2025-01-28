@@ -163,6 +163,17 @@ ul {
   white-space: nowrap;
 }
 
+.Images {
+  margin-top: 100px;
+  width:1000px;
+  display: block; 
+  margin-left: auto; 
+  margin-right: auto;
+  box-shadow: black 10px 10px 10px;
+  border: 10px solid #20000091;
+  border-radius: 30px;
+}
+
 .shadow-gradient {
   position: relative;
   background-color: white;
