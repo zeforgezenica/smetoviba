@@ -1,0 +1,56 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main class="imagesMain">
+			<a href="src/pages/Images/smetoviImage1.png" target="_blank">
+				<img src="src/pages/Images/smetoviImage1.png" alt="img1" class="Images" />
+			</a>  
+			<a href="src/pages/Images/smetoviImage2.png" target="_blank">
+				<img src="src/pages/Images/smetoviImage2.png" alt="img2" class="Images" />
+			</a>  
+			<a href="src/pages/Images/smetoviImage3.png" target="_blank">
+				<img src="src/pages/Images/smetoviImage3.png" alt="img3" class="Images" />
+			</a>  
+			<a href="src/pages/Images/smetoviImage4.png" target="_blank">
+				<img src="src/pages/Images/smetoviImage4.png" alt="img4" class="Images" />
+			</a>  
+			<a href="src/pages/Images/smetoviImage5.png" target="_blank">
+				<img src="src/pages/Images/smetoviImage5.png" alt="img5" class="Images" />
+			</a>  
+			<a href="src/pages/Images/smetoviImage6.png" target="_blank">
+				<img src="src/pages/Images/smetoviImage6.png" alt="img6" class="Images" />
+			</a>  
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	.landing-background {
+		background-image: url('/landing-image.png'); 
+		background-size: cover; 
+		background-position: center; 
+		height: 100vh; 
+		width: 100vw;
+		color: white; 
+		display: flex; 
+		justify-content: center; 
+		align-items: center; 
+	}
+	main img {
+		max-width: 100;
+		height: auto;
+	}
+</style>
